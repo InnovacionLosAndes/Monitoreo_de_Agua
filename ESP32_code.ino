@@ -112,7 +112,7 @@ void loop() {
       avgval += buffer_arr[i]; 
     }
 
-    float volt = (float)avgval * 5 / 4095.0 / 6; 
+    float volt = (float)avgval * (THE-VOLTAGE-THAT-YOUR-PH-SENSOR-IS-GETTING) / 4095.0 / 6; 
     ph_act = -4.90 * volt + calibration_value; 
 
     Serial.print("Valor pH: "); 
